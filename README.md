@@ -26,6 +26,12 @@ contains the dataframe since we used df to figure out the problems.
 ### bank.csv
 The dataset we selected. More detail can be found in our report or bank-eda-test.ipynb.
 
+## Setting of the project
+
+### 1. AKS setting
+In this project, we used student plan(https://portal.azure.com/).
+
 
 ## Author
-This project is created and maintained by @LeungKwokFan and @ipton17.
+This project is created and maintained by [@](https://github.com/LeungKwokFan)LeungKwokFan and [@](https://github.com/ipton17
+)ipton17.
