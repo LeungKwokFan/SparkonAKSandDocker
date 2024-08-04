@@ -252,6 +252,11 @@ or
 kubectl describe pod your-pod-name
 ```
 
+## Output and Results
+
+Some of the basic results of our project are as shown as following:
+
+
 
 ## Problems and solutions
 
