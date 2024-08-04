@@ -293,6 +293,14 @@ If you can not download or upload the file on the blob container, and you have c
 Go to the "Networking" tab of the storage account, add your new IP address on Firewall option.
 
 
+### Cache Problem
+If you found some warning about cache in your python file when dealing with the dataframe, it may be caused by Out of Memory situation.
+
+* Solution:
+
+Use `dataframe.cache()` to cache dataframes.
+
+
 ## Author
 This project is created and maintained by [@](https://github.com/LeungKwokFan)***LeungKwokFan*** and [@](https://github.com/ipton17
 )***ipton17***.
