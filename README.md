@@ -265,7 +265,9 @@ exec /usr/local/bin/docker-entrypoint.sh: exec format error
 ```
 Specially, if you are using an Apple computer based on the arm64 architecture(2020 or newer Macbook),it may be caused by architecture mismatch.
 
-* If so, please check the architecture of the image and AKS, using the following commands:
+* Solution:
+
+If so, please check the architecture of the image and AKS, using the following commands:
 ```
 kubectl get nodes -o jsonpath='{.items[*].status.nodeInfo.architecture}'
 ```
@@ -282,6 +284,13 @@ docker buildx inspect --bootstrap
 docker buildx build --platform linux/amd64 -t your-image-name .
 ```
 
+### Can not reach the Blob
+
+If you can not download or upload the file on the blob container, and you have changed the internet connection recently. It may be caused by the new IP address can not be accpected by your storage account.
+
+* Solution:
+
+Go to the "Networking" tab of the storage account, add your new IP address on Firewall option.
 
 
 ## Author
