@@ -192,7 +192,7 @@ docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image
 
 ### Local
 1. Using spark command in local terminal:
-   ```
+```
    spark-submit \
   --master local \
   --deploy-mode client \
@@ -200,7 +200,7 @@ docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image
   --py-files <Py file path> \
   --files <File like dataset path> \
   <Py file path>
-   ```
+```
 2. 
 
 
