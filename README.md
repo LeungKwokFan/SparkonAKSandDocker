@@ -265,7 +265,7 @@ exec /usr/local/bin/docker-entrypoint.sh: exec format error
 ```
 Specially, if you are using an Apple computer based on the arm64 architecture(2020 or newer Macbook),it may be caused by architecture mismatch.
 
-If so, please check the architecture of the image and AKS, using the following commands:
+* If so, please check the architecture of the image and AKS, using the following commands:
 ```
 kubectl get nodes -o jsonpath='{.items[*].status.nodeInfo.architecture}'
 ```
