@@ -253,6 +253,37 @@ kubectl describe pod your-pod-name
 ```
 
 
+## Problems and solutions
+
+Some problems we met and corresponding solutions will be moentioned here.
+
+### Architecture Issues
+
+If your pod shows Error and when you check the logs of the pod and found the ErrorCode is 1, and you got the following message:
+```
+exec /usr/local/bin/docker-entrypoint.sh: exec format error
+```
+Specially, if you are using an Apple computer based on the arm64 architecture(2020 or newer Macbook),it may be caused by architecture mismatch.
+
+If so, please check the architecture of the image and AKS, using the following commands:
+```
+kubectl get nodes -o jsonpath='{.items[*].status.nodeInfo.architecture}'
+```
+and 
+```
+docker inspect <image_name>:latest | grep Architecture
+```
+
+If mismatch, please use another laptop or just use the Docker `buildx` function for other architecture:
+```
+docker buildx create --name mybuilder
+docker buildx use mybuilder
+docker buildx inspect --bootstrap
+docker buildx build --platform linux/amd64 -t your-image-name .
+```
+
+
+
 ## Author
 This project is created and maintained by [@](https://github.com/LeungKwokFan)***LeungKwokFan*** and [@](https://github.com/ipton17
 )***ipton17***.
