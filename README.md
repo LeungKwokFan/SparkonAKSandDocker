@@ -191,7 +191,7 @@ docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image
 ## How to use?
 
 ### Local
-1. Using spark command in local terminal:
+* Using spark command in local terminal:
 ```
    spark-submit \
   --master local \
@@ -201,7 +201,11 @@ docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image
   --files <File like dataset path> \
   <Py file path>
 ```
-2. 
+* Type ```Jupyter Lab``` in local terminal and copy the link and paste on your browser. Then you can debug your .ipynb code.
+
+### Azure AKS
+
+
 
 
 
