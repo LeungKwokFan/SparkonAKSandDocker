@@ -206,7 +206,7 @@ docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image
 ### Azure AKS
 1. In your blob, upload your dataset on the working path(if any).
 2. Use the following command in the container for submmission(the first container we created):
-   ```
+```
    spark-submit \
   --master k8s://https://###YOUR AKS API SERVER ADDRESS### \
   --deploy-mode cluster \
@@ -222,7 +222,7 @@ docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image
   --conf spark.kubernetes.file.upload.path=abfss://###BLOB CONTAINER###@###STORAGE ACCOUNT###.dfs.core.windows.net/ \
   --verbose \
   file:///home/spark/mount/###PROGRAM_PATH###
-  ```
+```
 
 
 
