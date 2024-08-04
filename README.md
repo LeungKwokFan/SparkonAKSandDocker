@@ -223,8 +223,34 @@ docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image
   --verbose \
   file:///home/spark/mount/###PROGRAM_PATH###
 ```
-
-
+3. In your file, please change the file path if you need to read the file or output some files:
+```
+read_file = "abfss://<your_storage_container>@<your_storage_acct_name>.dfs.core.windows.net/file.file"
+```
+Or
+```
+output_example.df.write.csv("abfss://<your_storage_container>@<your_storage_acct_name>.dfs.core.windows.net/filename", mode="overwrite", header=True)
+```
+4. If you want to check the status of the aks, use the command:
+```
+kubectl get all
+```
+or
+```
+kubectl logs pod/your-pod-name
+```
+5. If your program does not work well, use the following command to find the logs:
+```
+kubectl logs pod/your-pod-name
+```
+or
+```
+kubectl get events
+```
+or 
+```
+kubectl describe pod your-pod-name
+```
 
 
 ## Author
