@@ -188,7 +188,20 @@ docker build –t <image_name> -f local-aks-dockerfile .
 docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image_name>
 ```
 
+## How to use?
 
+### Local
+1. Using spark command in local terminal:
+   ```
+   spark-submit \
+  --master local \
+  --deploy-mode client \
+  --name <Project name> \
+  --py-files <Py file path> \
+  --files <File like dataset path> \
+  <Py file path>
+   ```
+2. 
 
 
 
