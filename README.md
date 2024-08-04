@@ -254,5 +254,5 @@ kubectl describe pod your-pod-name
 
 
 ## Author
-This project is created and maintained by [@](https://github.com/LeungKwokFan)**LeungKwokFan** and [@](https://github.com/ipton17
-)**ipton17**.
+This project is created and maintained by [@](https://github.com/LeungKwokFan)***LeungKwokFan*** and [@](https://github.com/ipton17
+)***ipton17***.
