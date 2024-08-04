@@ -1,7 +1,7 @@
-# EDAonAKSandDocker
+# SparkonAKSandDocker
 
 ## Intro
-Using Docker and Azure AKS to finish the EDA or other program. And the py. file and .ipynb file can be changed for dealing with other tasks.
+Using Docker and Azure AKS to finish the EDA or other program based on spark. And the py. file and .ipynb file can be changed for dealing with other tasks.
 
 ## File Statement
 ### AKS
