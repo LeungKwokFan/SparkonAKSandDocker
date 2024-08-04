@@ -255,8 +255,9 @@ kubectl describe pod your-pod-name
 ## Output and Results
 
 Some of the basic results of our project are as shown as following:
-
-
+![The output dataframe of Question 3.](./images/q3.png)
+![The output dataframe of Question 4.](./images/q4.png)
+![The output dataframe of Question 5.](./images/q5.png)
 
 ## Problems and solutions
 
