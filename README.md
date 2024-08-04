@@ -134,7 +134,7 @@ docker push <username>/<image_name>
 In this project, **ipton17** created the image used on AKS, you can find it on https://hub.docker.com/r/ipton17/ass4aks.
 
 
-### 7. Create first local image for submission of aks
+### 7. Create first local container for submission of aks
 
 * Build the image,
 ```
@@ -177,7 +177,7 @@ kubectl config current-context
 And will see the AKS cluster name.
 
 
-### 8. Create secon local image for testing
+### 8. Create second local container for testing
 
 * Build the image,
 ```
@@ -204,7 +204,25 @@ docker run --name <container_name> -it -v <host_folder>:/home/spark/mount <image
 * Type ```Jupyter Lab``` in local terminal and copy the link and paste on your browser. Then you can debug your .ipynb code.
 
 ### Azure AKS
-
+1. In your blob, upload your dataset on the working path(if any).
+2. Use the following command in the container for submmission(the first container we created):
+   ```
+   spark-submit \
+  --master k8s://https://###YOUR AKS API SERVER ADDRESS### \
+  --deploy-mode cluster \
+  --name ###PROGRAM NAME### \
+  --conf spark.kubernetes.container.image=###Your SPARK IMAGE### \
+  --conf spark.kubernetes.driver.pod.name=###PROGRAM NAME###\
+  --conf spark.executor.cores=1 \
+  --conf spark.executor.instances=2 \
+  --conf spark.kubernetes.context=###YOUR AKS CLUSTER### \
+  --conf spark.kubernetes.authenticate.driver.serviceAccountName=###SERVICE ACCOUNT### \
+  --conf spark.hadoop.fs.azure.account.key.###STORAGE ACCOUNT###.dfs.core.windows.net=#########STORAGE ACCOUNT ACCESS KEY########################### \
+  --jars local:///opt/spark/jars/hadoop-azure-3.3.4.jar,local:///opt/spark/jars/hadoop-azure-datalake-3.3.4.jar \
+  --conf spark.kubernetes.file.upload.path=abfss://###BLOB CONTAINER###@###STORAGE ACCOUNT###.dfs.core.windows.net/ \
+  --verbose \
+  file:///home/spark/mount/###PROGRAM_PATH###
+  ```
 
 
 
