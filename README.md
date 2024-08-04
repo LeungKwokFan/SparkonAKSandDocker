@@ -49,13 +49,13 @@ And choose:
 ▪ Mount storage - the files will be persisted, and you can reuse them in future session
 
 Type this command:
-'''
+```
 az aks get-credentials --resource-group <gp_name> --name <clus_name>
-'''
+```
 Then the folloing message will be shown:
-'''
+```
 Merged "<clus_name>" as current context in /home/<user>/.kube/config
-'''
+```
 
 
 ## Author
