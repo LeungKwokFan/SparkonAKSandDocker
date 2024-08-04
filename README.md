@@ -28,10 +28,36 @@ The dataset we selected. More detail can be found in our report or bank-eda-test
 
 ## Setting of the project
 
-### 1. AKS setting
-In this project, we used student plan(https://portal.azure.com/).
+### 1. K8s Cluster setting
+
+In this project, we used student plan(https://portal.azure.com/) to set the configuration. If you don not have one, you can use pay-as-u-go plan.
+
+Create a aks, set the configuration:
+* type the name and group
+* set "Cluster preset configuration" as “Dev/Test"
+* set "cluster region" as East Asia(Hong Kong SAR), it depends on where you are
+* set "Availability zones" as None
+* select Free tier for AKS Pricing
+* set the node, at least 3 CPU cores and 4GB memory(D4s v3), and set min node count and max node count to 1
+* Unclick Prometheus
+
+### 2. set the shell of AKS
+
+Click the shell icon of the AKS after creating the AKS successfully.
+And choose:
+▪ No storage - temporary session: all the files will be gone after the session
+▪ Mount storage - the files will be persisted, and you can reuse them in future session
+
+Type this command:
+'''
+az aks get-credentials --resource-group <gp_name> --name <clus_name>
+'''
+Then the folloing message will be shown:
+'''
+Merged "<clus_name>" as current context in /home/<user>/.kube/config
+'''
 
 
 ## Author
-This project is created and maintained by [@](https://github.com/LeungKwokFan)LeungKwokFan and [@](https://github.com/ipton17
-)ipton17.
+This project is created and maintained by [@](https://github.com/LeungKwokFan)**LeungKwokFan** and [@](https://github.com/ipton17
+)**ipton17**.
