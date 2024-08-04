@@ -4,7 +4,7 @@
 Using Docker and Azure AKS to finish the EDA or other program. And the py. file and .ipynb file can be changed for dealing with other tasks.
 
 ## File Statement
-### aks
+### AKS
 The file ass4 in aks is for aks environment and only show the questions and corresponding answer when executed.
 1. bank-eda-aks.py: how the questions and corresponding answer in aks.
 2. aks-dockerfile: to build the image for submission to aks.
