@@ -300,6 +300,10 @@ If you found some warning about cache in your python file when dealing with the 
 
 Use `dataframe.cache()` to cache dataframes.
 
+## Other Problems
+
+Remember to stop your AKS for saving your quota or bills.
+
 
 ## Author
 This project is created and maintained by [@](https://github.com/LeungKwokFan)***LeungKwokFan*** and [@](https://github.com/ipton17
