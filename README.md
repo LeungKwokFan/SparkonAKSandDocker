@@ -294,7 +294,7 @@ docker buildx build --platform linux/amd64 -t your-image-name .
 
 If you can not download or upload the file on the blob container, and you have changed the internet connection recently. It may be caused by the new IP address can not be accpected by your storage account.
 
-* Solution:
+- Solution:
 
 Go to the "Networking" tab of the storage account, add your new IP address on Firewall option.
 
@@ -302,7 +302,7 @@ Go to the "Networking" tab of the storage account, add your new IP address on Fi
 ### Cache Problem
 If you found some warning about cache in your python file when dealing with the dataframe, it may be caused by Out of Memory situation.
 
-* Solution:
+- Solution:
 
 Use `dataframe.cache()` to cache dataframes.
 
